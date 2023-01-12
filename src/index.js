@@ -11,6 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const newTask = document.createElement('li');
     newTask.textContent = descField.value;
 
+    const delBtn = document.createElement('button')
+    delBtn.textContent = 'Delete';
+    delBtn.addEventListener('click', (event) => {
+     newTask.remove();
+    });
+
+    newTask.append(delBtn);
     taskList.append(newTask);
   })
 });
